@@ -1,9 +1,11 @@
-let bgpage = chrome.extension.getBackgroundPage();
 
+let bgpage = chrome.extension.getBackgroundPage();
 let text = bgpage.word;
 console.log(text);
+
+
 let list  = document.getElementById("notes");
-let ul = document.createElement("ul");
+
 
 text.forEach(function (text) {
 	var li = document.createElement('li');
@@ -29,15 +31,12 @@ downloadbtn.onclick = function() {
 
     chrome.downloads.download({
         url: myurl,
+        filename: myfilename,
         saveAs: true
     }, function(downloadId) {
 
     });
 };
-// li.innerText = word;
-// list.appendChild(li);
-// //document.write(word);
-// console.log(word);
 
 
 
