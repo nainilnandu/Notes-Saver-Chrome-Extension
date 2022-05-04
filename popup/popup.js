@@ -35,7 +35,8 @@ downloadbtn.onclick = function() {
         filename: myfilename,
         saveAs: true
     }, function() {
-
+        // notes = [];
+        // bgpage.savedNotes = [];
     });
 };
 
