@@ -1,10 +1,12 @@
 console.log("Background Running!!");
 
+// Event Listener of the message which was sent from content.js
 chrome.runtime.onMessage.addListener(reciever);
 
-window.word = [];
+window.savedNotes = [];
 
+// Saves all the selected text in savedNotes array 
 function reciever(request, sender, sendResponse){
     console.log(request);
-    word.push(request.text + "\n" + "\n");
+    savedNotes.push(request.text + "\n" + "\n");
 }
